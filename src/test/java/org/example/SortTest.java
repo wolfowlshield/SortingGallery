@@ -7,10 +7,12 @@ import java.util.Arrays;
 public class SortTest extends TestCase {
 
     public void testSortTwo() {
-        int[] testArray = new int[] {82, 19};
+        int[] unorderedArray = new int[] {82, 19};
+        int[] orderedArray = new int[] {19, 82};
         int[] expectedArray = new int[] {19, 82};
-        Sort.sortTwo(testArray);
-        assertTrue(Arrays.equals(testArray,expectedArray));
+        Sort.sortTwo(unorderedArray);
+        assertTrue(Arrays.equals(unorderedArray,expectedArray));
+        assertTrue(Arrays.equals(orderedArray,expectedArray));
     }
 
     public void testMerge() {
